@@ -6,7 +6,31 @@
     <title>InstagramLiveCommentSystem</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    
+    <!-- Add our custom Instagram data handling script -->
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+        // Wait for Unity to be ready
+        window.setTimeout(function() {
+          if (window.unityInstance) {
+            try {
+              var instagramData = localStorage.getItem('instagramLiveData');
+              if (instagramData) {
+                // Pass data to Unity
+                unityInstance.SendMessage('InstagramLiveFetcher', 'ProcessInstagramData', instagramData);
+                // Clear data from localStorage
+                localStorage.removeItem('instagramLiveData');
+                console.log('Instagram data passed to Unity');
+              }
+            } catch (e) {
+              console.error('Error passing Instagram data to Unity:', e);
+            }
+          }
+        }, 3000); // Give enough time for Unity to initialize
+      });
+    </script>
   </head>
+  
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1920 height=1080></canvas>
@@ -84,6 +108,10 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
 
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
       } else {
@@ -101,7 +129,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-          window.unityInstance = unityInstance; // Make globally accessible
+          window.unityInstance = unityInstance; // Save unityInstance to window for our script
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
