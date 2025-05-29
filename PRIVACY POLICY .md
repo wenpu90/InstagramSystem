@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Effective Date:** [Insert Date]  
+**Effective Date:** [29 May 2025]  
 **App Name:** Instagram Live +1  
-**Developer/Company Name:** [Your Name or Company]  
+**Developer/Company Name:** [Wenpu Ng/ RiskPointGame]  
 
 Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your data.
 
@@ -33,4 +33,4 @@ We may update this Privacy Policy. Please check back periodically for changes.
 
 ## 7. Contact
 
-For privacy-related questions, please contact: [your email or GitHub Issues page]
+For privacy-related questions, please contact: [phoo86_1234@hotmail.com]
