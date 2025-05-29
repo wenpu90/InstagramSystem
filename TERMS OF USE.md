@@ -1,8 +1,8 @@
 # Terms of Use
 
-**Effective Date:** [Insert Date]  
+**Effective Date:** [29 May 2025]  
 **App Name:** Instagram Live +1  
-**Developer/Company Name:** [Your Name or Company]  
+**Developer/Company Name:** [Wenpu Ng/ RiskPointGame] 
 
 Thank you for using Instagram Live +1! By accessing or using our app, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, you may not use the app.
 
@@ -35,4 +35,4 @@ We may update these terms from time to time. Continued use of the app constitute
 
 ## 7. Contact
 
-If you have questions, please contact: [your email or GitHub Issues page]
+If you have questions, please contact: [phoo86_1234@hotmail.com]
